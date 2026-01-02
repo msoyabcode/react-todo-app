@@ -1,25 +1,39 @@
-# React Todo App
+# React Todo App 📝
 
-A beginner-friendly **React Todo App** with basic features like **add, edit, delete, and mark todos as complete**. This project is built using **React + Vite** and demonstrates **local storage usage** and **React state management**.
+A beginner-friendly React Todo App with modern UI improvements using **Tailwind CSS**.  
+This project demonstrates **React state management**, **localStorage usage**, and **CRUD operations** in a simple, clean interface.
 
 ---
 
-## Features
+## 🚀 Features
 
 - Add new todos
 - Edit existing todos
 - Delete todos
 - Mark todos as complete
-- Todos are saved in browser **local storage** (persistent)
-- Simple and clean UI (can be improved)
+- Todos are saved in browser **localStorage** (persistent)
+- Clean and responsive UI with **Tailwind CSS**
+- Enter key support for adding todos
 
 ---
 
-## Installation
+## 🛠 Tech Stack
+
+- **React** (with functional components and hooks)
+- **Tailwind CSS** for styling
+- **Vite** as build tool
+- **JavaScript**
+
+---
+
+## 📸 Preview
+
+*(Add screenshot here if you want, e.g., `screenshot.png` in repo)*
+
+---
+
+## 💻 Installation
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/msoyabcode/react-todo-app.git
-
-
