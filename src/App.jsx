@@ -70,35 +70,59 @@ const App = () => {
   },[todos])
 
   return (
-    <div>
-      <h1>Todo App</h1>
+    <div className='min-h-screen bg-gray-100  flex justify-center items-center'>
+      <div className='bg-white w-full max-w-md p-6  rounded-lg shadow '>
 
+        {/* \ Heading */}
+      <h1 className='text-2xl font-bold text-center mb-4'>Todo App</h1>
+
+       {/* Input + Button */}
+      <div className='flex gap-2 mb-4'>
       <input
         type="text" 
         value={todo}
         onChange={handleChange} 
+        placeholder='Enter a todo...'
+        className='flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 ' 
      />
-      <button onClick={handleAdd}>{editId === null ? "Save": "update"}</button>
+      <button
+       onClick={handleAdd}
+       className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'
+       >{editId === null ? "Save": "update"}</button>
+       </div>
 
-      <div>
+          {/* Todo List */}
+      <div className='space-y-2.5'>
         {todos.map(item =>{
           return  (
-          <div key={item.id}>
+          <div key={item.id}
+          className='flex justify-between bg-gray-100 p-3 rounded'>
+
+            {/* Left */}
+            <div className='flex gap-2'>
             <input
              type="checkbox" 
              checked = {item.isComplete}
              onChange={() => handleCheckbox(item.id)}
+             className='w-4 h-4'
              />
-            <span style={{ textDecoration: item.isComplete ? "line-through": "none"}}>{item.todo}</span>
-              <button onClick={()=>handleDelete(item.id)}>Delete</button>
-              <button onClick={()=>handleEdit(item.id)}>Edit</button>
+            <span className={ item.isComplete? "line-through text-gray-400": "text-gray-800" }>{item.todo}</span>
+            </div>
+
+                  {/* Right */}
+            <div className='flex gap-2'>
+              <button onClick={()=>handleEdit(item.id)} className='text-blue-500 hover:underline '>Edit</button>
+              <button onClick={()=>handleDelete(item.id)} className='text-red-500 hover:underline'>Delete</button>
+            </div>
           </div>
           
           )
-        })}
+         })}
+      </div>
       </div>
     </div>
   )
 }
 export default App 
+
 
