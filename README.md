@@ -26,12 +26,6 @@ This project demonstrates **React state management**, **localStorage usage**, an
 
 ---
 
-## 📸 Preview
-
-*(Add screenshot here if you want, e.g., `screenshot.png` in repo)*
-
----
-
 ## 💻 Installation
 
 1. Clone the repository:
